@@ -20,13 +20,13 @@ const AppLayout = ({Component}) => {
 
     const items = [
         {label: <Link href="/">Home</Link>, key: 'home'},
-        {label: <Link href="products">상품</Link>, key: 'products'},  //items?
-        {label: <Link href="stores">매장</Link>, key: 'stores'},
-        {label: <Link href="profile">내 정보</Link>, key: 'profile'},
+        {label: <Link href="/products">상품</Link>, key: 'products'},  //items?
+        {label: <Link href="/stores">매장</Link>, key: 'stores'},
+        {label: <Link href="/profile">내 정보</Link>, key: 'profile'},
     ];
-
+    // TODO: Layout style width 값 설정
     return (
-        <Layout>
+        <Layout style={{width: 1530}}>
             <LayoutHeader>
                 <div className="logo"></div>
                 <Menu
@@ -37,7 +37,7 @@ const AppLayout = ({Component}) => {
                 />
             </LayoutHeader>
             <LayoutContent>
-                <div className="site-layout-background">
+                <div className="site-layout-background" style={{ marginBottom: 30 }}>
                     {/*{children}*/}
                     <Component/>
                 </div>
