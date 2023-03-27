@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useCallback} from "react";
 import AppLayout from "../components/AppLayout";
+import {Card, Col, Row} from "antd";
+import StoreList from "../components/StoreList";
+import SearchBar from "../components/SearchBar";
 
 const Stores = () => {
+
+    const onClickDetail = useCallback(() => {
+        console.log('Click Store');
+    }, [])
+
     return(
-            <div> 동네 가게 페이지.</div>
+        <>
+            <div style={{ display: 'flex', justifyContent: 'center', }}>
+            <SearchBar />
+            </div>
+            <StoreList />
+        </>
     )
 }
 
